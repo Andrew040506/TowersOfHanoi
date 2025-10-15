@@ -1,7 +1,7 @@
 import Stack as stack
 
 class Hanaoi:
-    def __init__(self,new_DiskSize=3):
+    def __init__(self,new_DiskSize):
         self.diskSize = new_DiskSize
         stack_A = stack.Stack(name="A")
         stack_B = stack.Stack(name="B")
@@ -15,7 +15,7 @@ class Hanaoi:
         
         for numIter in reversed(range(1,self.diskSize+1)):
             self.towers['A'].push(numIter)
-    def move_disk(self):
+    def move_disk(self, from_tower, to_tower):
         pass 
     def display(self):
         pass
