@@ -38,6 +38,7 @@ class Hanaoi:
         return self.towers["B"].is_empty() & self.towers["A"].is_empty()
 
 
+
 if __name__ == "__main__":
     hanaoi = Hanaoi(3)
 

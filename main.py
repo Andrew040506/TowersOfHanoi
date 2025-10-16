@@ -15,6 +15,9 @@ def main():
             break
         elif all(item in "ABC" for item in choice) and len(choice) == 2:
             Hanabas.move_disk(choice[0], choice[1])
+            if Hanabas.is_solved():
+                print("You won!")
+                break
             #print(choice[0], "->", choice[1])
         else:
             print("Invalid move!")
