@@ -35,7 +35,7 @@ class Hanaoi:
             print(f"{k} {v.__str__()}")
             
     def is_solved(self):
-        pass 
+        return self.towers["B"].is_empty() & self.towers["A"].is_empty()
 
 
 if __name__ == "__main__":
