@@ -1,6 +1,6 @@
 import Hanaoi as hanoi
 
-def main():
+def run():
     disk_size = int(input("Enter the size of the disk: "))
     Hanabas = hanoi.Hanaoi(3)
 
@@ -17,11 +17,6 @@ def main():
             #print(choice[0], "->", choice[1])
         else:
             print("Invalid move!")
-
-
-
-
-
 
 if __name__ == "__main__":
     main()
