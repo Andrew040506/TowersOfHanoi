@@ -1,12 +1,13 @@
 import Hanaoi as hanoi
 
-def run():
+def main():
     disk_size = int(input("Enter the size of the disk: "))
-    Hanabas = hanoi.Hanaoi(3)
+    Hanabas = hanoi.Hanaoi(disk_size)
 
     while True:
         print("Game start! Move all disks from A to C:\nType 'X' anytime to exit.")
-        print("(print disk and poles)")
+        #print("(print disk and poles)")
+        Hanabas.display()
         choice = input("Enter move (e.g. A C): ")
         choice = choice.split()
         #print(choice)

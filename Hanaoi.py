@@ -32,17 +32,19 @@ class Hanaoi:
     def display(self):
         # For testing 
         for k,v in self.towers.items():
-            print(v.__str__())
+            print(f"{k} {v.__str__()}")
             
     def is_solved(self):
         pass 
 
-hanaoi = Hanaoi(3)
 
-hanaoi.move_disk("A","B")
-hanaoi.move_disk("A","C")
+if __name__ == "__main__":
+    hanaoi = Hanaoi(3)
 
-hanaoi.move_disk("B","C")
-hanaoi.move_disk("A","B")
+    hanaoi.move_disk("A","B")
+    hanaoi.move_disk("A","C")
 
-hanaoi.display()
+    hanaoi.move_disk("B","C")
+    hanaoi.move_disk("A","B")
+
+    hanaoi.display()
