@@ -2,6 +2,7 @@ class Node:
 	def __init__(self, data):
 		self.data = data
 		self.next = None
+
 class Stack:
     def __init__(self,name):
         self.name = name # name per stack for tower indication
@@ -24,3 +25,23 @@ class Stack:
             print("Stack is empty")
             return -1  # Return a sentinel value indicating error
         return self.top.data
+
+    def is_empty(self):
+        return self.top is None
+
+    def __str__(self):
+        current = self.top
+        items = []
+        while current:
+            items.append(str(current.data))
+            current = current.next
+        return "Stack: " + " -> ".join(items)
+
+if __name__ == "__main__":
+    #for testing
+    stack = Stack("A")
+    print(stack.is_empty())
+    stack.push(1)
+    stack.push(2)
+    stack.push(3)
+    print(stack.__str__())
