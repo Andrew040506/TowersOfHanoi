@@ -1,24 +1,28 @@
 import Hanaoi as hanoi
+import os 
 
-def main():
+def run():
     disk_size = int(input("Enter the size of the disk: "))
     Hanabas = hanoi.Hanaoi(disk_size)
 
     while True:
         print("Game start! Move all disks from A to C:\nType 'X' anytime to exit.")
-        #print("(print disk and poles)")
         Hanabas.display()
-        choice = input("Enter move (e.g. A C): ")
-        choice = choice.split()
-        #print(choice)
+        
+        choice = input("Enter move (e.g. A C): ").split()
         if choice == "X":
             break
         elif all(item in "ABC" for item in choice) and len(choice) == 2:
-            Hanabas.move_disk(choice[0], choice[1])
+            
+            Hanabas.move_disk(from_tower=choice[0],to_tower= choice[1])
+            
             if Hanabas.is_solved():
+                Hanabas.display()
                 print("You won!")
+                print(f"Moves: {Hanabas.moves}")
                 break
-            #print(choice[0], "->", choice[1])
+            else :
+                os.system('cls')
         else:
             print("Invalid move!")
 
