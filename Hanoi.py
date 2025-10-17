@@ -1,6 +1,6 @@
 import Stack as stack
 
-class Hanaoi:
+class Hanoi:
     def __init__(self,new_DiskSize):
         self.diskSize = new_DiskSize
         

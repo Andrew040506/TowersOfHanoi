@@ -1,9 +1,9 @@
-import Hanaoi as hanoi
+import TowersOfHanoi.Hanoi as hanoi
 import os 
 
 def run():
     disk_size = int(input("Enter the size of the disk: "))
-    Hanabas = hanoi.Hanaoi(disk_size)
+    Hanabas = hanoi.Hanoi(disk_size)
 
     while True:
         print("Game start! Move all disks from A to C:\nType 'X' anytime to exit.")
