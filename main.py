@@ -13,11 +13,12 @@ def run():
         choice = input("Enter move (e.g. A C): ").split()
         if choice[0].upper().strip() == "X":
             break
-        elif all(item in "ABC" for item in choice) and len(choice) == 2:
+        elif all(item in "ABC" or "abc" for item in choice) and len(choice) == 2:
             os.system('cls')
-            Hanabas.move_disk(from_tower=choice[0],to_tower= choice[1])
+            Hanabas.move_disk(from_tower=choice[0].upper(),to_tower= choice[1].upper())
             
             if Hanabas.is_solved():
+                os.system('cls')
                 Hanabas.display()
                 print("Congratulations! You solved the Towers of Hanoi!")
                 print(f"Moves: {Hanabas.moves}")
